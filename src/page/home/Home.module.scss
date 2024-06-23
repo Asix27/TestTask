@@ -1,0 +1,181 @@
+.homePage {
+  color: black;
+  padding-inline: 24px;
+
+  form {
+    position: relative;
+
+    .searchInput {
+      width: 313px;
+      height: 38px;
+      border-radius: var(--border-radius);
+      margin-top: 16px;
+      border: var(--border-light-blue);
+      margin-right: 4px;
+      padding: 11px 9px;
+    }
+    .searchInput::-webkit-input-placeholder {
+      font-size: 16px;
+      color: #9CA3AF;
+    }
+    .searchInput::-webkit-input-placeholder:before {
+      content: url("/src/assets/icons/Search.svg");
+      font-size: 10px;
+    }
+
+    button {
+      width: 120px;
+      height: 38px;
+      border-radius: var(--border-radius);
+      background-color: var(--color-blue);
+      color: var(--color-white);
+      padding: 0 24px;
+      border: var(--border-light);
+      font-size: 14px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 24px;
+  height: 60px;
+  border: var(--border-light-blue);
+  background-color: var(--color-white);
+  width: 100%;
+
+  img {
+    width: 90px;
+    height: 30px;
+  }
+}
+
+
+.tableContainer {
+  width: 100%;
+  background-color: #f5f5f5;
+  margin-top: 28px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 0;
+    margin-bottom: 22px;
+  }
+}
+
+.documentsTable {
+  border-collapse: separate;
+  border-spacing: 2px;
+  border: var(--border-light);
+  border-radius: var(--border-radius);
+
+  thead {
+    background-color: var(--color-blue);
+    color: white;
+  }
+
+  th, td {
+    padding: 6px 16px;
+  }
+
+  tbody {
+    tr {
+      background-color: var(--color-white);
+    }
+    th, td {
+      padding: 7px 15px;
+    }
+  }
+
+  thead tr, tbody tr {
+    text-align: left;
+    border: var(--border-light-blue);
+  }
+
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+}
+
+.documentsTable tr:first-child th:first-child {
+  border-top-left-radius: 4px;
+}
+.documentsTable tr:first-child th:last-child {
+  border-top-right-radius: 4px;
+}
+.documentsTable tr:last-child td:first-child {
+  border-bottom-left-radius: 4px;
+}
+.documentsTable tr:last-child td:last-child {
+  border-bottom-right-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end; // Align pagination to the right
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 18px;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.pagination a:hover {
+  background-color: rgba(0, 66, 105, 0.07);
+}
+
+.active a {
+  background-color: rgba(0, 66, 105, 0.07);
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 38px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+
+
+@media (max-width: 550px) {
+  .header {
+    width: 100%;
+    padding-inline: 12px; // Уменьшение отступов на маленьких экранах
+  }
+
+  .homePage {
+    padding-inline: 12px; // Уменьшение отступов на маленьких экранах
+  }
+
+  .searchInput {
+    width: 100%; // Полная ширина на маленьких экранах
+    margin-right: 0;
+  }
+
+  button {
+    width: 100%; // Полная ширина на маленьких экранах
+    margin-top: 8px; // Добавьте отступ сверху для кнопки
+  }
+}
